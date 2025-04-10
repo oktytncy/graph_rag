@@ -30,6 +30,11 @@
       + [✅ Result Using Graph RAG:](#-result-using-graph-rag-2)
    * [✅ Results Summary](#-results-summary)
       + [🎯 Key Takeaways:](#-key-takeaways)
+   * [⚠️ When *Not* to Use Graph RAG](#-when-not-to-use-graph-rag)
+      + [1. 🧾 Simple, Fact-Based Queries](#1-simple-fact-based-queries)
+      + [2. 🚫 No Meaningful Connections Between Documents](#2-no-meaningful-connections-between-documents)
+      + [3. 🛠 More Complex Setup, Especially for Beginners](#3-more-complex-setup-especially-for-beginners)
+      + [4. 🐌 Performance Considerations](#4-performance-considerations)
 
 ---
 
@@ -282,3 +287,64 @@ After testing three real-world questions based on our ingested documents about t
 
 > ✅ **Conclusion:**  
 > These results show that Graph RAG isn’t just about retrieval — it’s about **reasoning across connected knowledge**. This makes it perfect for research-heavy topics, technical documentation, and any domain where the full answer lives across multiple sources.
+
+---
+
+## ⚠️ When *Not* to Use Graph RAG
+
+While Graph RAG is powerful, it's not always the best fit for every use case. Like any tool, it shines in some scenarios and adds unnecessary complexity in others.
+
+Here are some situations where **Graph RAG might not be the right choice**:
+
+---
+
+### 1. 🧾 Simple, Fact-Based Queries
+
+If your use case involves:
+- Short documents,
+- Direct fact lookup (e.g., “When was the Mona Lisa painted?”),
+- Or a small number of text chunks,
+
+Then classical RAG is **faster, simpler, and easier to maintain**. You don’t need multi-hop reasoning to answer straightforward questions.
+
+---
+
+### 2. 🚫 No Meaningful Connections Between Documents
+
+Graph RAG works best when:
+- There are **recurring entities or topics** (like “Leonardo,” “Louvre,” “visual analysis”),
+- And those topics benefit from being **connected**.
+
+But if your dataset is **broad and unrelated** (e.g., documents about cooking, airplanes, and guitar tuning), creating a graph may:
+- Add unnecessary overhead,
+- Return irrelevant connections,
+- And give worse results than a simple semantic search.
+
+---
+
+### 3. 🛠 More Complex Setup, Especially for Beginners
+
+Graph RAG requires:
+- A deeper understanding of vector stores,
+- Traversal strategies,
+- Edge definitions,
+- And sometimes custom configurations.
+
+If you're just starting with LangChain, LangFlow, or vector search, it might be better to begin with a **classical RAG** setup and upgrade later.
+
+---
+
+### 4. 🐌 Performance Considerations
+
+Graph RAG performs **extra steps** like:
+- Graph traversal,
+- Building and managing node-edge relationships.
+
+This can be **slower and more resource-intensive**, especially on large datasets, compared to traditional top-K similarity search.
+
+---
+
+> 💡 **Summary:**  
+> Use Graph RAG when your data is **richly interconnected**, and the value of combining insights from multiple places outweighs the extra setup.  
+> For simpler tasks, classical RAG will often be **faster, easier, and good enough**.
+
