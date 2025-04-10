@@ -1,3 +1,30 @@
+- [Graph RAG with LangFlow and AstraDB](#graph-rag-with-langflow-and-astradb)
+  * [🤔 What is Graph RAG?](#---what-is-graph-rag-)
+  * [📌 Why use Graph RAG instead of Classical RAG?](#---why-use-graph-rag-instead-of-classical-rag-)
+  * [🎨 LangFlow Graph RAG Example](#---langflow-graph-rag-example)
+    + [What’s happening in this workflow?](#what-s-happening-in-this-workflow-)
+  * [📥 Ingesting Historical Documents into AstraDB](#---ingesting-historical-documents-into-astradb)
+    + [1. Preparing Your Documents](#1-preparing-your-documents)
+    + [2. Setting Up Your LangFlow Workflow](#2-setting-up-your-langflow-workflow)
+    + [Why These Settings?](#why-these-settings-)
+    + [3. Running Your Ingestion Workflow](#3-running-your-ingestion-workflow)
+  * [🧭 Choosing the Right Traversal Strategy in Graph RAG](#---choosing-the-right-traversal-strategy-in-graph-rag)
+    + [Why `Eager` Works Best for This Use Case](#why--eager--works-best-for-this-use-case)
+    + [What `Eager` Does:](#what--eager--does-)
+    + [Other Strategies and Why We Didn't Use Them (for now):](#other-strategies-and-why-we-didn-t-use-them--for-now--)
+    + [Summary:](#summary-)
+  * [🧪 Testing the Graph RAG Setup](#---testing-the-graph-rag-setup)
+    + [🧪 Test Question 1: Identity of the Mona Lisa](#---test-question-1--identity-of-the-mona-lisa)
+    + [✅ Result Using Graph RAG:](#--result-using-graph-rag-)
+    + [🧪 Test Question 2: Modern Visual Analysis Techniques](#---test-question-2--modern-visual-analysis-techniques)
+    + [✅ Result Using Graph RAG:](#--result-using-graph-rag--1)
+    + [🧪 Test Question 3: Comparing Mona Lisa Versions](#---test-question-3--comparing-mona-lisa-versions)
+    + [✅ Result Using Graph RAG:](#--result-using-graph-rag--2)
+  * [✅ Results Summary](#--results-summary)
+    + [🎯 Key Takeaways:](#---key-takeaways-)
+
+---
+
 # Graph RAG with LangFlow and AstraDB
 
 This guide will show you how to build smarter AI chatbots or assistants using Graph Retrieval-Augmented Generation (Graph RAG).
