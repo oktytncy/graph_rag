@@ -30,11 +30,11 @@
       + [✅ Result Using Graph RAG:](#-result-using-graph-rag-2)
    * [✅ Results Summary](#-results-summary)
       + [🎯 Key Takeaways](#-key-takeaways)
-    * [⚠️ When Not to Use Graph RAG](#when-not-to-use-graph-rag)
-      + [1. 🧾 Simple, Fact-Based Queries](#1simple-fact-based-queries)
-      + [2. 🚫 No Meaningful Connections Between Documents](#2----no-meaningful-connections-between-documents)
-      + [3. 🛠 More Complex Setup, Especially for Beginners](#3----more-complex-setup--especially-for-beginners)
-      + [4. 🐌 Performance Considerations](#4----performance-considerations)
+   * [⚠️ When Not to Use Graph RAG](#-when-not-to-use-graph-rag)
+      + [1. 🧾 Simple, Fact-Based Queries](#1-simple-fact-based-queries)
+      + [2. 🚫 No Meaningful Connections Between Documents](#2-no-meaningful-connections-between-documents)
+      + [3. 🛠 More Complex Setup, Especially for Beginners](#3-more-complex-setup-especially-for-beginners)
+      + [4. 🐌 Performance Considerations](#4-performance-considerations)
 
 ---
 
