@@ -29,12 +29,12 @@
       + [🧪 Test Question 3: Comparing Mona Lisa Versions](#-test-question-3-comparing-mona-lisa-versions)
       + [✅ Result Using Graph RAG:](#-result-using-graph-rag-2)
    * [✅ Results Summary](#-results-summary)
-      + [🎯 Key Takeaways:](#-key-takeaways)
-   * [⚠️ When *Not* to Use Graph RAG](#-when-not-to-use-graph-rag)
-      + [1. 🧾 Simple, Fact-Based Queries](#1-simple-fact-based-queries)
-      + [2. 🚫 No Meaningful Connections Between Documents](#2-no-meaningful-connections-between-documents)
-      + [3. 🛠 More Complex Setup, Especially for Beginners](#3-more-complex-setup-especially-for-beginners)
-      + [4. 🐌 Performance Considerations](#4-performance-considerations)
+      + [🎯 Key Takeaways](#-key-takeaways)
+    * [⚠️ When Not to Use Graph RAG](#when-not-to-use-graph-rag)
+      + [1. 🧾 Simple, Fact-Based Queries](#1simple-fact-based-queries)
+      + [2. 🚫 No Meaningful Connections Between Documents](#2----no-meaningful-connections-between-documents)
+      + [3. 🛠 More Complex Setup, Especially for Beginners](#3----more-complex-setup--especially-for-beginners)
+      + [4. 🐌 Performance Considerations](#4----performance-considerations)
 
 ---
 
@@ -278,7 +278,7 @@ After testing three real-world questions based on our ingested documents about t
 | **2**      | How modern techniques reveal new painting insights                    | Explained several distinct analysis methods and how each helps understand the art. |
 | **3**      | Differences between Mona Lisa copies and expert interpretations       | Combined visual comparisons with expert opinion to show both technique and meaning. |
 
-### 🎯 Key Takeaways:
+### 🎯 Key Takeaways
 - **Graph RAG successfully connected related information** across multiple documents.
 - It **generated coherent, comparative, and complete answers**, even when no single source held the full picture.
 - Answers were **more detailed and balanced** than what we’d typically get from classical RAG (which only retrieves isolated text chunks).
@@ -290,7 +290,7 @@ After testing three real-world questions based on our ingested documents about t
 
 ---
 
-## ⚠️ When *Not* to Use Graph RAG
+## ⚠️ When Not to Use Graph RAG
 
 While Graph RAG is powerful, it's not always the best fit for every use case. Like any tool, it shines in some scenarios and adds unnecessary complexity in others.
 
