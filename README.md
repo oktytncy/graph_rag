@@ -14,12 +14,12 @@
    * [📥 Ingesting Historical Documents into AstraDB](#-ingesting-historical-documents-into-astradb)
       + [1. Preparing Your Documents](#1-preparing-your-documents)
       + [2. Setting Up Your LangFlow Workflow](#2-setting-up-your-langflow-workflow)
-      + [Why These Settings?](#why-these-settings)
+         - [Why These Settings?](#why-these-settings)
       + [3. Running Your Ingestion Workflow](#3-running-your-ingestion-workflow)
    * [🧭 Choosing the Right Traversal Strategy in Graph RAG](#-choosing-the-right-traversal-strategy-in-graph-rag)
       + [Why `Eager` Works Best for This Use Case](#why-eager-works-best-for-this-use-case)
-      + [What `Eager` Does:](#what-eager-does)
-      + [Other Strategies and Why We Didn't Use Them (for now):](#other-strategies-and-why-we-didnt-use-them-for-now)
+         - [What `Eager` Does?](#what-eager-does)
+      + [Other Strategies and Why We Didn't Use Them (for now)](#other-strategies-and-why-we-didnt-use-them-for-now)
       + [Summary:](#summary)
    * [🧪 Testing the Graph RAG Setup](#-testing-the-graph-rag-setup)
       + [🧪 Test Question 1: Identity of the Mona Lisa](#-test-question-1-identity-of-the-mona-lisa)
@@ -139,7 +139,7 @@ Here are the key nodes and their functions clearly explained:
 - **AstraDB Component**: Stores the embeddings, enabling fast and accurate searching.
   - Database and collection: Use clear names for easy reference, e.g., Database: `HistoricalDocs`, Collection: `MonaLisa`.
 
-### Why These Settings?
+#### Why These Settings?
 - **Chunk Size (800)**: The default value is `1000`, but smaller chunks provide precise information retrieval, ensuring each chunk covers a focused topic.
 - **Chunk Overlap (150)**: The default value is `200`, but smaller overlap reduces redundancy, saving vector storage without losing contextual continuity.
 - **Embedding Model (text-embedding-3-small)**: Provides fast, accurate embeddings suitable for effective semantic searches.
@@ -166,7 +166,7 @@ Our dataset includes **three different but related documents** about the *Mona L
 
 These documents refer to **shared concepts** (e.g. “Leonardo da Vinci,” “Louvre,” “smile,” “eyes,” “painting style”), but each document approaches the topic from a different angle. To generate the best answers, we need to **gather and combine** relevant information from all documents—not just one.
 
-### What `Eager` Does:
+#### What `Eager` Does?
 - It **aggressively follows connections** in the graph to collect all related chunks.
 - This means it can combine different perspectives from multiple documents into one coherent answer.
 - It’s ideal for **exploratory or multi-hop queries** like:
